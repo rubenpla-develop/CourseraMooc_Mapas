@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">CourseraMoocGoogleMaps</string>
     <string name="title_activity_maps">Map Activity</string>
+    <string name="cardview_title_sagrada_familia">Sagrada Familia</string>
+    <string name="cardview_title_camp_nou">Camp Nou</string>
+    <string name="cardview_title_casa_batllo">Casa Batlló</string>
+    <string name="cardview_title_parc_guell">Parc Güell</string>
+
 </resources>
