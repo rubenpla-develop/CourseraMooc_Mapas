@@ -7,37 +7,47 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 public class MainActivity extends AppCompatActivity {
 
-    private Button button;
-    private ImageView campNou;
-    private ImageView sagradaFamilia;
-    private ImageView batllo;
-    private ImageView university;
+    @BindView(R.id.campnou) private ImageView campNou;
+    @BindView(R.id.sagradafamilia) private ImageView sagradaFamilia;
+    @BindView(R.id.batllo) private ImageView batllo;
+    @BindView(R.id.university) private ImageView university;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button = (Button) findViewById(R.id.maps_button);
+        ButterKnife.bind(this);
+    }
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                goToMaps();
-            }
-        });
+    @OnClick(R.id.campnou)
+    void onClickCampNou(View v) {
+
+    }
+
+    @OnClick(R.id.university)
+    void onClickUniversity(View v) {
+
+    }
+
+    @OnClick(R.id.sagradafamilia)
+    void onClickSagradaFamilia(View v) {
+
+    }
+
+    @OnClick(R.id.batllo)
+    void onClickCasaBatllo(View v) {
+
     }
 
     private void goToMaps() {
         Intent intent = new Intent(this, MapsActivity.class);
         startActivity(intent);
     }
-
-    private void goToCampNouMap() {
-
-    }
-
-
 }
